@@ -1,10 +1,14 @@
-const express=require('express');
-const app=express();
-const path=require('path');
-app.use(express.static(__dirname + '/dist'));
-app.listen(process.env.PORT||8000);
-app.get('/*',function(req,res)
-{
-    res.sendFile(path.join(__dirname+'/dist/index.html'));
-})
-console.log('Console listening!');
+const express = require('express');
+const path = require('path');
+const app = express();
+
+// Serve static files....
+app.use(express.static(__dirname + '/dist/MY_APP_NAME_HERE'));
+
+// Send all requests to index.html
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname + '/dist/MY_APP_NAME_HERE/index.html'));
+});
+
+// default Heroku PORT
+app.listen(process.env.PORT || 3000);
