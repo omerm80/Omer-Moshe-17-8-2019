@@ -8,7 +8,6 @@ import 'rxjs/add/operator/catch';
 
 import 'rxjs/Rx';
 import 'rxjs/add/operator/map';
-import { ThrowStmt } from '@angular/compiler';
 @Injectable({
   providedIn: 'root'
 })
