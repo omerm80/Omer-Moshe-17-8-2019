@@ -22,6 +22,7 @@ export class WeatherService {
  weeklyWeather:weatherItem[]=[];
  lat:any;
  lng:any;
+ isCelcius:true;
 //tyourLocationCity=
  currentSelectedLocation:weatherItem=new weatherItem("","","",false);
  

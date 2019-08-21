@@ -128,10 +128,11 @@ getCond(currWeather:weatherItem)//get the weather of the current location(the cu
 
           if(!this.isCelcius)
           {
+            console.log("1111111");
             weatherDay.minTemp=(weatherDay.minTemp*1.8)+32;
-            weatherDay.temperature.toFixed(2)
+            weatherDay.minTemp.toFixed(2);
             weatherDay.maxTemp=(weatherDay.maxTemp*1.8)+32;
-            weatherDay.maxTemp.toFixed(2)
+            weatherDay.maxTemp.toFixed(2);
           }
           weatherDay.weatherType=key.Day.IconPhrase;
 
@@ -198,7 +199,8 @@ getCond(currWeather:weatherItem)//get the weather of the current location(the cu
 
 toggleMetric()//change the metric unit
 {
- this.isCelcius=!this.isCelcius; 
+  this.isCelcius=!this.isCelcius;
+  
 }
 
 
